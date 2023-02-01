@@ -6,37 +6,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>선영이의 콩밭노트</title>
         <link rel="stylesheet" href="style.css">
+        <script type="module" src='https://unpkg.com/html-include-element'></script>
+        <link rel="stylesheet" href="../style.css">
     </head>
     <body>
-        <img id="Cover" src="resources/img_coding.jpg" width="80%">
-        <header>
-            <h1>콩밭노트</h1>
-        </header>
+        <html-include src="./insert/header.html"></html-include>  
         <div class="grid-container">
-            <nav>
-                <ul>
-                    <li>
-                        <a href="index.html">HOME</a>
-                    </li>
-                    <li>
-                        <a href="1.html">보험 리모델링</a>
-                    </li>
-                    <li>
-                        <a href="2.html">투자노트 만들기</a>
-                    </li>
-                    <li>
-                        <a href="3.html">신용카드 이벤트</a>
-                    </li>
-                </ul>
-            </nav>
-            <section class="article-list">
-                <ul>
-                    <li>첫번째 글</li>
-                    <li>두번째 글</li>
-                    <li>세번째 글</li>
-                    <li>...더보기</li>
-                </ul>
-            </section>
+            <html-include src="./insert/side-left.html"></html-include>  
             <article class="article">
                 <h2>작성배경</h2>
                 <p>
@@ -51,32 +27,8 @@
                     요새 하고 있는 몇가지 이슈에 대해 작성할 건데 동시에 HTML, CSS 그리고 가능하면 JS까지 연습할거다.
                 </p>
             </article>
-            <aside>
-                <div class="ad">
-                    <img src="./resources/img01.avif" alt="ad" width="100px" height="150px">
-                    <p><a href="#">광고배너입니다.</a></p>
-                </div>
-                <div class="realted">
-                    <h3>관련글</h3>
-                    <ul>
-                        <li>관련글1</li>
-                        <li>관련글2</li>
-                    </ul>
-                </div>
-                <div class="search">
-                    <h3>검색</h3>
-                    form
-                </div>
-            </aside>
+            <html-include src="./insert/side-right.html"></html-include>  
         </div>
-        
+        <html-include src="./insert/footer.html"></html-include>  
     </body>
-    <footer>
-        <p id="Name">
-            고선영
-        </p>
-        <p id="Phone">
-            010-1234-1234
-        </p>
-    </footer>
 </html>
