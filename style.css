@@ -1,7 +1,20 @@
-header {
- text-align: center;
- border-bottom: 1px goldenrod dashed;
- margin-bottom: 20px;
+@font-face {
+  font-family: 'LINESeedKR-Bd';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'MonoplexKRWide-BoldItalic';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_Monoplex-wide@1.0/MonoplexKRWide-BoldItalic.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'MonoplexKR-Italic';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_Monoplex-kr@1.0/MonoplexKR-Italic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
 }
 /* 잠시 비활성화
 .grid-container {
@@ -14,24 +27,55 @@ header {
   grid-column-start: 1;
 }
 */
-nav { grid-area: left1; }
-.article-list { grid-area: left2;}
-article { grid-area: main; }
-.ad { grid-area: right1; }
-.related { grid-area: right2; }
-.search {grid-area: right3; }
 
-.grid-container {
-  display: grid;
-  grid:
-    'left1 main right1'
-    'left1 main right2'
-    'left2 main right3';
-    gap: 15px 20px ;
-
+header {
+  letter-spacing: 4px;
+  border-bottom: 2px goldenrod double;
+  margin-bottom: 50px;
+  text-align: right;
+  font-family: 'MonoplexKRWide-BoldItalic';
+ }
+ h2, h3 {
+  font-family: 'MonoplexKR-Italic';
+  border-bottom: 1px lightgrey solid;
+ }
+ /* grid-container setting */
+ nav { 
+  grid-area: left1; 
+  margin-bottom: 15px;
+  }
+ .article-list {
+  grid-area: left2;
+  margin-bottom: 15px;
+  }
+ article { 
+  grid-area: main;
+ }
+ .ad {
+  grid-area: right1; 
+  margin-bottom: 15px;
+  }
+ .related { 
+  grid-area: right2;
+  margin-bottom: 15px;
+  }
+ .search {
+  grid-area: right3; 
 }
+ .grid-container {
+   display: grid;
+   justify-items:center;
+   grid-template-areas: 
+     'left1 main right1' 
+     'left2 main right2' 
+     'left2 main right3' ;
+
+   grid-template-rows: auto;
+   grid-template-columns: 200px 1fr 200px;
+   gap: 15px 15px ;
+ }
 
 footer {
   text-align: center;
-  border-top: 1px goldenrod dashed;
+  border-top: 2px goldenrod double;
 }
