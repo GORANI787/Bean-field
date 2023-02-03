@@ -1,0 +1,6 @@
+#grid-container-left #grid-container-right{
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: start;
+  align-items: flex-start;
+}

@@ -1,3 +1,5 @@
+/*2302021735 */
+
 @font-face {
   font-family: 'LINESeedKR-Bd';
   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2') format('woff2');
@@ -17,53 +19,60 @@
   font-style: normal;
 }
 
+html body{
+  margin: 0px;
+  padding: 0px;
+}
+
 header {
   letter-spacing: 4px;
   border-bottom: 2px goldenrod double;
-  margin-bottom: 50px;
   text-align: right;
   font-family: 'MonoplexKRWide-BoldItalic';
  }
  h2, h3 {
   font-family: 'MonoplexKR-Italic';
-  border-bottom: 1px lightgrey solid;
+  border-bottom: 1px goldenrod dotted;
+ }
+ h2 {
+  background-color: white;
+  position: sticky;
+  top: 0px;
  }
  /* grid-container setting */
- .grid-container {
+#grid-container-left {
   display: grid;
-  grid-template-columns: 1fr 3fr 1fr;
-  grid-template-rows: auto auto auto;
-  gap: 2px;
-  justify-items: center;
-  
+  grid-template-columns: auto;
+  grid-template-rows: 300px 1fr;
+  gap: 0px;
+  margin: 0px;
+  padding: 0px;
+  position: sticky;
+  top: 1px;
 }
- #pages {  
-  grid-column: 1/2;
-  grid-row-start: 1; 
-  grid-row-end: 3; 
-  }
- #article-list {
-  grid-column: 1 / 2;
-  grid-row: 3 / 4;
-  }
- #main { 
-  grid-column: 2 / 3;
-  grid-row: 1 / 4;
- }
- #ad {
-  grid-column: 3 / 4;
-  grid-row: 1 / 2;
-  }
- #related { 
-  grid-column: 3 / 4;
-  grid-row: 2 / 3;
-  }
- #search {
-  grid-column: 3 / 4;
-  grid-row: 3 / 4;
+#grid-container-right {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 1fr 1fr 150px;
+  gap: 2px;
+  margin: 0px;
+  padding: 0px;
+  position: sticky;
+  top: 1px;
+} 
+.grid-container {
+  display: grid;
+  grid-template-columns: 150px 1fr 150px;
+  grid-template-rows: auto;
+  gap: 10px;
+  margin-top: 10px;
+  padding-top: 10px;
+  padding: 0px;
 }
 
 footer {
   text-align: center;
   border-top: 2px goldenrod double;
+  font-weight: 200;
 }
+

@@ -1,0 +1,74 @@
+@font-face {
+  font-family: 'LINESeedKR-Bd';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'MonoplexKRWide-BoldItalic';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_Monoplex-wide@1.0/MonoplexKRWide-BoldItalic.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'MonoplexKR-Italic';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_Monoplex-kr@1.0/MonoplexKR-Italic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+header {
+  letter-spacing: 4px;
+  border-bottom: 2px goldenrod double;
+  margin-bottom: 50px;
+  text-align: right;
+  font-family: 'MonoplexKRWide-BoldItalic';
+ }
+ h2, h3 {
+  font-family: 'MonoplexKR-Italic';
+  border-bottom: 1px lightgrey solid;
+ }
+ /* grid-container setting */
+ .grid-container {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: auto auto auto;
+  gap: 2px;
+  justify-items: center;
+  
+}
+ #pages {  
+  grid-column: 1/2;
+  grid-row-start: 1; 
+  grid-row-end: 3; 
+  }
+ #article-list {
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+  }
+ #main { 
+  grid-column: 2 / 3;
+  grid-row: 1 / 4;
+ }
+ aside {
+  display: block;
+ }
+ #ad {
+  grid-column: 3 / 4;
+  grid-row: 1 / 2;
+  }
+ #related { 
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+  }
+ #search {
+  grid-column: 3 / 4;
+  grid-row: 3 / 4;
+}
+
+footer {
+  text-align: center;
+  border-top: 2px goldenrod double;
+  font-weight: 200;
+}
+
